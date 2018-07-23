@@ -97,6 +97,8 @@
         "iothubtransportmqtt.h": "c",
         "azureiotcerts.h": "c",
         "httpapi.h": "c",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "rte_components.h": "c",
+        "condition.h": "c"
     }
 }

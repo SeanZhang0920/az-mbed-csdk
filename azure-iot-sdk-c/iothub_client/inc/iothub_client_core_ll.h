@@ -30,6 +30,8 @@ typedef struct IOTHUB_CLIENT_CORE_LL_HANDLE_DATA_TAG* IOTHUB_CLIENT_CORE_LL_HAND
 #include "iothub_transport_ll.h"
 #include "iothub_client_core_common.h"
 
+#include "iothub_client_ll.h"
+
 #ifdef __cplusplus
 extern "C"
 {

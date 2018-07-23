@@ -26,9 +26,6 @@
 #include "../../c-utility/inc/azure_c_shared_utility/macro_utils.h"
 #include "../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
 
-
-#include "iothub_client_core_ll.h"
-
 typedef struct IOTHUB_CLIENT_CORE_LL_HANDLE_DATA_TAG* IOTHUB_CLIENT_LL_HANDLE;
 
 #define IOTHUB_CLIENT_FILE_UPLOAD_RESULT_VALUES \
@@ -609,18 +606,18 @@ extern "C"
      */
      MOCKABLE_FUNCTION(, IOTHUB_CLIENT_RESULT, IoTHubClient_LL_UploadMultipleBlocksToBlob, IOTHUB_CLIENT_LL_HANDLE, iotHubClientHandle, const char*, destinationFileName, IOTHUB_CLIENT_FILE_UPLOAD_GET_DATA_CALLBACK, getDataCallback, void*, context);
 
-     /**
-     * @brief    This API uploads to Azure Storage the content provided block by block by @p getDataCallback
-     *           under the blob name devicename/@pdestinationFileName
-     *
-     * @param    iotHubClientHandle      The handle created by a call to the create function.
-     * @param    destinationFileName     name of the file.
-     * @param    getDataCallbackEx       A callback to be invoked to acquire the file chunks to be uploaded, as well as to indicate the status of the upload of the previous block.
-     * @param    context                 Any data provided by the user to serve as context on getDataCallback.
-     *
-     * @return   IOTHUB_CLIENT_OK upon success or an error code upon failure.
-     */
-     MOCKABLE_FUNCTION(, IOTHUB_CLIENT_RESULT, IoTHubClient_LL_UploadMultipleBlocksToBlobEx, IOTHUB_CLIENT_LL_HANDLE, iotHubClientHandle, const char*, destinationFileName, IOTHUB_CLIENT_FILE_UPLOAD_GET_DATA_CALLBACK_EX, getDataCallbackEx, void*, context);
+    //  /**
+    //  * @brief    This API uploads to Azure Storage the content provided block by block by @p getDataCallback
+    //  *           under the blob name devicename/@pdestinationFileName
+    //  *
+    //  * @param    iotHubClientHandle      The handle created by a call to the create function.
+    //  * @param    destinationFileName     name of the file.
+    //  * @param    getDataCallbackEx       A callback to be invoked to acquire the file chunks to be uploaded, as well as to indicate the status of the upload of the previous block.
+    //  * @param    context                 Any data provided by the user to serve as context on getDataCallback.
+    //  *
+    //  * @return   IOTHUB_CLIENT_OK upon success or an error code upon failure.
+    //  */
+    //  MOCKABLE_FUNCTION(, IOTHUB_CLIENT_RESULT, IoTHubClient_LL_UploadMultipleBlocksToBlobEx, IOTHUB_CLIENT_LL_HANDLE, iotHubClientHandle, const char*, destinationFileName, IOTHUB_CLIENT_FILE_UPLOAD_GET_DATA_CALLBACK_EX, getDataCallbackEx, void*, context);
 
 #endif /*DONT_USE_UPLOADTOBLOB*/
 
