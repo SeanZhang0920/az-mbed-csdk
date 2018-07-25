@@ -15,21 +15,10 @@
 #ifndef IOTHUB_CLIENT_H
 #define IOTHUB_CLIENT_H
 
-#include <stddef.h>
-#include <stdint.h>
-
-#include "../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
-#include "iothub_transport_ll.h"
-#include "iothub_client_core_ll.h"
-#include "iothub_client_core.h"
-#include "iothub_client_ll.h"
-
 #ifndef IOTHUB_CLIENT_INSTANCE_TYPE
-typedef IOTHUB_CLIENT_CORE_HANDLE IOTHUB_CLIENT_HANDLE;
+typedef struct IOTHUB_CLIENT_INSTANCE_TAG* IOTHUB_CLIENT_HANDLE;
 #define IOTHUB_CLIENT_INSTANCE_TYPE
 #endif // IOTHUB_CLIENT_INSTANCE
-
-#define IOTHUB_CLIENT_CORE_HANDLE IOTHUB_CLIENT_INSTANCE_TAG*;
 
 #include "iothubtransport.h"
 #include <stddef.h>
@@ -368,29 +357,15 @@ extern "C"
     */
     MOCKABLE_FUNCTION(, IOTHUB_CLIENT_RESULT, IoTHubClient_UploadToBlobAsync, IOTHUB_CLIENT_HANDLE, iotHubClientHandle, const char*, destinationFileName, const unsigned char*, source, size_t, size, IOTHUB_CLIENT_FILE_UPLOAD_CALLBACK, iotHubClientFileUploadCallback, void*, context);
 
-    /**  
-    ** DEPRECATED: Use IoTHubClient_UploadMultipleBlocksToBlobAsyncEx instead **
+    /**
     * @brief                          Uploads a file to a Blob storage in chunks, fed through the callback function provided by the user.
     * @remarks                        This function allows users to upload large files in chunks, not requiring the whole file content to be passed in memory.
     * @param iotHubClientHandle       The handle created by a call to the IoTHubClient_Create function.
     * @param destinationFileName      The name of the file to be created in Azure Blob Storage.
     * @param getDataCallback          A callback to be invoked to acquire the file chunks to be uploaded, as well as to indicate the status of the upload of the previous block.
     * @param context                  Any data provided by the user to serve as context on getDataCallback.
-    * @returns                        An IOTHUB_CLIENT_RESULT value indicating the success or failure of the API call.
-    ** DEPRECATED: Use IoTHubClient_UploadMultipleBlocksToBlobAsyncEx instead **
-    */
-    MOCKABLE_FUNCTION(, IOTHUB_CLIENT_RESULT, IoTHubClient_UploadMultipleBlocksToBlobAsync, IOTHUB_CLIENT_HANDLE, iotHubClientHandle, const char*, destinationFileName, IOTHUB_CLIENT_FILE_UPLOAD_GET_DATA_CALLBACK, getDataCallback, void*, context);
-
-    /**
-    * @brief                          Uploads a file to a Blob storage in chunks, fed through the callback function provided by the user.
-    * @remarks                        This function allows users to upload large files in chunks, not requiring the whole file content to be passed in memory.
-    * @param iotHubClientHandle       The handle created by a call to the IoTHubClient_Create function.
-    * @param destinationFileName      The name of the file to be created in Azure Blob Storage.
-    * @param getDataCallbackEx        A callback to be invoked to acquire the file chunks to be uploaded, as well as to indicate the status of the upload of the previous block.
-    * @param context                  Any data provided by the user to serve as context on getDataCallback.
     * @returns                        An IOTHUB_CLIENT_RESULT value indicating the success or failure of the API call.*/
-    MOCKABLE_FUNCTION(, IOTHUB_CLIENT_RESULT, IoTHubClient_UploadMultipleBlocksToBlobAsyncEx, IOTHUB_CLIENT_HANDLE, iotHubClientHandle, const char*, destinationFileName, IOTHUB_CLIENT_FILE_UPLOAD_GET_DATA_CALLBACK_EX, getDataCallbackEx, void*, context);
-
+    MOCKABLE_FUNCTION(, IOTHUB_CLIENT_RESULT, IoTHubClient_UploadMultipleBlocksToBlobAsync, IOTHUB_CLIENT_HANDLE, iotHubClientHandle, const char*, destinationFileName, IOTHUB_CLIENT_FILE_UPLOAD_GET_DATA_CALLBACK, getDataCallback, void*, context);
 #endif /* DONT_USE_UPLOADTOBLOB */
 
 #ifdef __cplusplus

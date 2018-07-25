@@ -4,10 +4,10 @@
 #ifndef TLSIO_WOLFSSL_H
 #define TLSIO_WOLFSSL_H
 
-#include "azure_c_shared_utility/xio.h"
-#include "azure_c_shared_utility/xlogging.h"
-#include "azure_c_shared_utility/umock_c_prod.h"
-#include "azure_c_shared_utility/const_defines.h"
+#include "xio.h"
+#include "xlogging.h"
+#include "umock_c_prod.h"
+#include "const_defines.h"
 
 #ifdef __cplusplus
 extern "C" {

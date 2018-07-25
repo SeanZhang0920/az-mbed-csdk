@@ -4,9 +4,9 @@
 #ifndef SASTOKEN_H
 #define SASTOKEN_H
 
-#include "azure_c_shared_utility/strings.h"
+#include "strings.h"
 #include <stdbool.h>
-#include "azure_c_shared_utility/umock_c_prod.h"
+#include "umock_c_prod.h"
 
 #ifdef __cplusplus
 extern "C" {

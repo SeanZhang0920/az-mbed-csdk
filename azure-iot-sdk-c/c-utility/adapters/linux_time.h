@@ -5,7 +5,7 @@
 #define LINUX_TIME_H
 
 #include <time.h>
-// #include <pthread.h>
+#include <pthread.h>
 
 #ifndef __MACH__
 extern clockid_t time_basis;

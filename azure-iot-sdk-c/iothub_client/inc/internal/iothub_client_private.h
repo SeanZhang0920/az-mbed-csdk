@@ -7,20 +7,20 @@
 #include <stdbool.h>
 #include <signal.h>
 
-#include "azure_c_shared_utility/constbuffer.h"
-#include "azure_c_shared_utility/crt_abstractions.h"
-#include "azure_c_shared_utility/doublylinkedlist.h"
-#include "azure_c_shared_utility/macro_utils.h"
-#include "azure_c_shared_utility/tickcounter.h"
-#include "azure_c_shared_utility/umock_c_prod.h"
+#include "../../../c-utility/inc/azure_c_shared_utility/constbuffer.h"
+#include "../../../c-utility/inc/azure_c_shared_utility/crt_abstractions.h"
+#include "../../../c-utility/inc/azure_c_shared_utility/doublylinkedlist.h"
+#include "../../../c-utility/inc/azure_c_shared_utility/macro_utils.h"
+#include "../../../c-utility/inc/azure_c_shared_utility/tickcounter.h"
+#include "../../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
 
-#include "iothub_message.h"
-#include "iothub_client_core_ll.h"
-#include "internal/iothub_transport_ll_private.h"
-#include "internal/iothubtransport.h"
+#include "../iothub_message.h"
+#include "../iothub_client_core_ll.h"
+#include "iothub_transport_ll_private.h"
+#include "iothubtransport.h"
 
 #ifdef USE_EDGE_MODULES
-#include "internal/iothub_client_edge.h"
+#include "iothub_client_edge.h"
 #endif
 
 #ifdef __cplusplus

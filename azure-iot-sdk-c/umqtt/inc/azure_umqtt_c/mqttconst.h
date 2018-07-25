@@ -13,7 +13,7 @@ extern "C" {
 #include <stdint.h>
 #endif /* __cplusplus */
 
-#include "azure_c_shared_utility/crt_abstractions.h"
+#include "../../c-utility/inc/azure_c_shared_utility/crt_abstractions.h"
 
 #define CONTROL_PACKET_TYPE_VALUES \
     CONNECT_TYPE = 0x10, \

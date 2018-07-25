@@ -4,7 +4,7 @@
 #ifndef TCPSOCKETCONNECTION_C_H
 #define TCPSOCKETCONNECTION_C_H
 
-#include "azure_c_shared_utility/umock_c_prod.h"
+#include "umock_c_prod.h"
 
 #ifdef __cplusplus
 extern "C" {

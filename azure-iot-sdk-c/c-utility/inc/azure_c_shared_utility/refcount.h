@@ -14,8 +14,8 @@ will interact with deallocated memory / resources resulting in an undefined beha
 #ifndef REFCOUNT_H
 #define REFCOUNT_H
 
-#include "azure_c_shared_utility/gballoc.h"
-#include "azure_c_shared_utility/macro_utils.h"
+#include "gballoc.h"
+#include "macro_utils.h"
 
 #ifdef __cplusplus
 #include <cstdlib>
@@ -69,9 +69,9 @@ static type* REFCOUNT_TYPE_DECLARE_CREATE(type) (void)                          
 #ifndef DEC_REF
 #error refcount_os.h does not define DEC_REF
 #endif // !DEC_REF
-#ifndef INIT_REF
-#error refcount_os.h does not define INIT_REF
-#endif // !INIT_REF
+// #ifndef INIT_REF
+// #error refcount_os.h does not define INIT_REF
+// #endif // !INIT_REF
 
 #ifdef __cplusplus
 }

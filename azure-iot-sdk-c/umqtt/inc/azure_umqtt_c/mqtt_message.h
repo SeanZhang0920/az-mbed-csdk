@@ -14,8 +14,8 @@ extern "C" {
 #include <stddef.h>
 #endif // __cplusplus
 
-#include "azure_umqtt_c/mqttconst.h"
-#include "azure_c_shared_utility/umock_c_prod.h"
+#include "mqttconst.h"
+#include "../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
 
 typedef struct MQTT_MESSAGE_TAG* MQTT_MESSAGE_HANDLE;
 

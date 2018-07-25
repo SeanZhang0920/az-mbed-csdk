@@ -7,8 +7,8 @@
 #ifndef TLSIO_OPTIONS_H
 #define TLSIO_OPTIONS_H
 
-#include "azure_c_shared_utility/xio.h"
-#include "azure_c_shared_utility/umock_c_prod.h"
+#include "xio.h"
+#include "umock_c_prod.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -20,7 +20,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+;
 typedef void* LOCK_HANDLE;
 
 #define LOCK_RESULT_VALUES \

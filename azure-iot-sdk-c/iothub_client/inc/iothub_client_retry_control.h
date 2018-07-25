@@ -6,8 +6,8 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
-#include "azure_c_shared_utility/optionhandler.h"
-#include "azure_c_shared_utility/umock_c_prod.h"
+#include "../../c-utility/inc/azure_c_shared_utility/optionhandler.h"
+#include "../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
 #include "iothub_client_ll.h"
 
 #ifdef __cplusplus

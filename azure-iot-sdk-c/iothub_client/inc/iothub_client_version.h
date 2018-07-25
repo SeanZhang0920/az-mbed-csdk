@@ -10,7 +10,7 @@
 
 #define IOTHUB_SDK_VERSION "1.1.28"
 
-#include "azure_c_shared_utility/umock_c_prod.h"
+#include "../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
 
 #ifdef __cplusplus
 extern "C"

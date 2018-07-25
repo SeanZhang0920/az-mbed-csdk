@@ -26,7 +26,7 @@
 #include "../../c-utility/inc/azure_c_shared_utility/macro_utils.h"
 #include "../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
 
-typedef struct IOTHUB_CLIENT_CORE_LL_HANDLE_DATA_TAG* IOTHUB_CLIENT_LL_HANDLE;
+typedef struct IOTHUB_CLIENT_LL_HANDLE_DATA_TAG* IOTHUB_CLIENT_LL_HANDLE;
 
 #define IOTHUB_CLIENT_FILE_UPLOAD_RESULT_VALUES \
     FILE_UPLOAD_OK, \

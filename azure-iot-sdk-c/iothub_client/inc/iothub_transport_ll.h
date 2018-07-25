@@ -32,13 +32,8 @@ typedef struct MESSAGE_CALLBACK_INFO_TAG
 #include "iothub_client_ll.h"
 
 #ifdef __cplusplus
-#include <cstddef>
-#include <cstdint>
 extern "C"
 {
-#else
-#include <stddef.h>
-#include <stdint.h>
 #endif
 
         /** @brief	This struct captures device configuration. */
@@ -99,25 +94,6 @@ pfIoTHubTransport_GetSendStatus IoTHubTransport_GetSendStatus  /*there's an inte
     {
         TRANSPORT_PROVIDER_FIELDS;
     };
-
-#include "../../c-utility/inc/azure_c_shared_utility/umock_c_prod.h"
-
-typedef void* TRANSPORT_LL_HANDLE;
-typedef void* IOTHUB_DEVICE_HANDLE;
-
-struct TRANSPORT_HANDLE_DATA_TAG;
-typedef struct TRANSPORT_HANDLE_DATA_TAG* TRANSPORT_HANDLE;
-
-typedef void* METHOD_HANDLE;
-
-struct TRANSPORT_PROVIDER_TAG;
-typedef struct TRANSPORT_PROVIDER_TAG TRANSPORT_PROVIDER;
-
-typedef const TRANSPORT_PROVIDER*(*IOTHUB_CLIENT_TRANSPORT_PROVIDER)(void);
-
-MOCKABLE_FUNCTION(, TRANSPORT_HANDLE, IoTHubTransport_Create, IOTHUB_CLIENT_TRANSPORT_PROVIDER, protocol, const char*, iotHubName, const char*, iotHubSuffix);
-MOCKABLE_FUNCTION(, void, IoTHubTransport_Destroy, TRANSPORT_HANDLE, transportHandle);
-MOCKABLE_FUNCTION(, TRANSPORT_LL_HANDLE, IoTHubTransport_GetLLTransport, TRANSPORT_HANDLE, transportHandle);
 
 #ifdef __cplusplus
 }
