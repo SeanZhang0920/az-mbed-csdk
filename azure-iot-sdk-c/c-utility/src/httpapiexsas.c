@@ -25,60 +25,60 @@ typedef struct HTTPAPIEX_SAS_STATE_TAG
 
 
 
-// static HTTPAPIEX_SAS_STATE* construct_httpex_sas(const char* key, const char* uriResource, const char* keyName)
-// {
-//     HTTPAPIEX_SAS_STATE* result;
+static HTTPAPIEX_SAS_STATE* construct_httpex_sas(const char* key, const char* uriResource, const char* keyName)
+{
+    HTTPAPIEX_SAS_STATE* result;
 
-//     result = (HTTPAPIEX_SAS_STATE*)malloc(sizeof(HTTPAPIEX_SAS_STATE));
-//     if (result == NULL)
-//     {
-//         LogError("Failure allocating HTTPAPIEX_SAS_Create.");
-//     }
-//     else
-//     {
-//         (void)memset(result, 0, sizeof(HTTPAPIEX_SAS_STATE));
-//         if (mallocAndStrcpy_s(&result->key, key) != 0)
-//         {
-//             /*Codes_SRS_HTTPAPIEXSAS_06_004: [If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create shall return NULL.]*/
-//             LogError("Failure allocating sas key.");
-//             HTTPAPIEX_SAS_Destroy(result);
-//             result = NULL;
-//         }
-//         else if (mallocAndStrcpy_s(&result->uriResource, uriResource) != 0)
-//         {
-//             /*Codes_SRS_HTTPAPIEXSAS_06_004: [If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create shall return NULL.]*/
-//             LogError("Failure allocating sas uriResource.");
-//             HTTPAPIEX_SAS_Destroy(result);
-//             result = NULL;
-//         }
-//         else if (keyName != NULL && mallocAndStrcpy_s(&result->keyName, keyName) != 0)
-//         {
-//             /*Codes_SRS_HTTPAPIEXSAS_06_004: [If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create shall return NULL.]*/
-//             LogError("Failure allocating sas keyName.");
-//             HTTPAPIEX_SAS_Destroy(result);
-//             result = NULL;
-//         }
-//     }
-//     return result;
-// }
+    result = (HTTPAPIEX_SAS_STATE*)malloc(sizeof(HTTPAPIEX_SAS_STATE));
+    if (result == NULL)
+    {
+        LogError("Failure allocating HTTPAPIEX_SAS_Create.");
+    }
+    else
+    {
+        (void)memset(result, 0, sizeof(HTTPAPIEX_SAS_STATE));
+        if (mallocAndStrcpy_s(&result->key, key) != 0)
+        {
+            /*Codes_SRS_HTTPAPIEXSAS_06_004: [If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create shall return NULL.]*/
+            LogError("Failure allocating sas key.");
+            HTTPAPIEX_SAS_Destroy(result);
+            result = NULL;
+        }
+        else if (mallocAndStrcpy_s(&result->uriResource, uriResource) != 0)
+        {
+            /*Codes_SRS_HTTPAPIEXSAS_06_004: [If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create shall return NULL.]*/
+            LogError("Failure allocating sas uriResource.");
+            HTTPAPIEX_SAS_Destroy(result);
+            result = NULL;
+        }
+        else if (keyName != NULL && mallocAndStrcpy_s(&result->keyName, keyName) != 0)
+        {
+            /*Codes_SRS_HTTPAPIEXSAS_06_004: [If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create shall return NULL.]*/
+            LogError("Failure allocating sas keyName.");
+            HTTPAPIEX_SAS_Destroy(result);
+            result = NULL;
+        }
+    }
+    return result;
+}
 
-// HTTPAPIEX_SAS_HANDLE HTTPAPIEX_SAS_Create_From_String(const char* key, const char* uriResource, const char* keyName)
-// {
-//     HTTPAPIEX_SAS_HANDLE result = NULL;
-//     if (key == NULL || uriResource == NULL)
-//     {
-//         /* Codes_SRS_HTTPAPIEXSAS_07_001: [ If the parameter key or uriResource is NULL then HTTPAPIEX_SAS_Create_From_String shall return NULL. ] */
-//         LogError("Invalid parameter key: %p, uriResource: %p", key, uriResource);
-//         result = NULL;
-//     }
-//     else
-//     {
-//         /* Codes_SRS_HTTPAPIEXSAS_07_002: [ If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create_From_String shall return NULL. ] */
-//         result = construct_httpex_sas(key, uriResource, keyName);
-//     }
-//     /* Codes_SRS_HTTPAPIEXSAS_07_003: [ HTTPAPIEX_SAS_Create_From_String shall create a new instance of HTTPAPIEX_SAS and return a non-NULL handle to it ] */
-//     return result;
-// }
+HTTPAPIEX_SAS_HANDLE HTTPAPIEX_SAS_Create_From_String(const char* key, const char* uriResource, const char* keyName)
+{
+    HTTPAPIEX_SAS_HANDLE result = NULL;
+    if (key == NULL || uriResource == NULL)
+    {
+        /* Codes_SRS_HTTPAPIEXSAS_07_001: [ If the parameter key or uriResource is NULL then HTTPAPIEX_SAS_Create_From_String shall return NULL. ] */
+        LogError("Invalid parameter key: %p, uriResource: %p", key, uriResource);
+        result = NULL;
+    }
+    else
+    {
+        /* Codes_SRS_HTTPAPIEXSAS_07_002: [ If there are any other errors in the instantiation of this handle then HTTPAPIEX_SAS_Create_From_String shall return NULL. ] */
+        result = construct_httpex_sas(key, uriResource, keyName);
+    }
+    /* Codes_SRS_HTTPAPIEXSAS_07_003: [ HTTPAPIEX_SAS_Create_From_String shall create a new instance of HTTPAPIEX_SAS and return a non-NULL handle to it ] */
+    return result;
+}
 
 HTTPAPIEX_SAS_HANDLE HTTPAPIEX_SAS_Create(STRING_HANDLE key, STRING_HANDLE uriResource, STRING_HANDLE keyName)
 {
