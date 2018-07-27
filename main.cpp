@@ -15,6 +15,8 @@ int main(void)
             wait(10);
             
     }
+
+    
     return 0;
 }
 

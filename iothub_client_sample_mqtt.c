@@ -15,7 +15,7 @@
 /*String containing Hostname, Device Id & Device Key in the format:                         */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessKey=<device_key>"                */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessSignature=<device_sas_token>"    */
-static const char* connectionString = "HostName=F767Hub2.azure-devices.net;DeviceId=F767Device;SharedAccessKey=7fLynguqRftQ+P493jFY5TQWYRHYwySiWXBkBe6cY7A=";
+static const char* connectionString = "HostName=MyTest11.azure-devices.net;DeviceId=TESTDevice;SharedAccessKey=1OlOUT7T2beLF/dcZGIwBgVPIry3A01UP+c19o38Kdc=";
 static int callbackCounter;
 static char msgText[1024];
 static char propText[1024];

@@ -19,10 +19,10 @@
 
 #include "NTPClient.h"
 
-#include "UDPSocket.h"
+#include "../mbed-os/features/netsocket/UDPSocket.h"
 
-#include "mbed.h" //time() and set_time()
-#include "def.h"
+#include "../mbed-os/mbed.h" //time() and set_time()
+#include "../mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/def.h"
 
 #define NTP_PORT 123
 #define NTP_CLIENT_PORT 0 //Random port

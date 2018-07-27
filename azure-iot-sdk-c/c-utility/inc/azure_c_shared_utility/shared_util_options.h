@@ -38,7 +38,12 @@ extern "C"
 
     static const char* OPTION_NET_INT_MAC_ADDRESS = "net_interface_mac_address";
 
+static STATIC_VAR_UNUSED const char* const OPTION_OPENSSL_CIPHER_SUITE = "CipherSuite";
+static STATIC_VAR_UNUSED const char* const OPTION_TLS_VERSION = "tls_version";
 
+    static STATIC_VAR_UNUSED const char* const OPTION_ADDRESS_TYPE = "ADDRESS_TYPE";
+    static STATIC_VAR_UNUSED const char* const OPTION_ADDRESS_TYPE_DOMAIN_SOCKET = "DOMAIN_SOCKET";
+    static STATIC_VAR_UNUSED const char* const OPTION_ADDRESS_TYPE_IP_SOCKET = "IP_SOCKET";
 #ifdef __cplusplus
 }
 #endif

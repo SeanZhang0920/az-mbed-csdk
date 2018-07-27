@@ -9,7 +9,10 @@ class TICK_COUNTER_INSTANCE_TAG
 {
 public:
     clock_t last_clock_value;
-    tickcounter_ms_t current_ms;
+    tickcounter_ms_t 
+    
+    
+    current_ms;
 };
 
 TICK_COUNTER_HANDLE tickcounter_create(void)
